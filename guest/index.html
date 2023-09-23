@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Invitation</title>
+</head>
+
+<body>
+    <div class="invitation-container">
+        <div id="loading">Loading...</div>
+        <h2 id="guestId"></h2>
+        <h1 id="eventTitle"></h1>
+        <p id="eventStartTime"></p>
+        <p id="eventEndTime"></p>
+        <p id="eventLocation"></p>
+        <div class="rsvp-buttons">
+            <button id="acceptButton" class="rsvp-button accept-button">Accept</button>
+            <button id="declineButton" class="rsvp-button decline-button">Decline</button>
+        </div>
+    </div>
+
+    <div id="errorPopup" class="error-popup" style="display:none;">
+        <div class="error-message">Invalid Invitation ID</div>
+    </div>
+
+    <script src="script.js"></script>
+    <a id="calendarLink" class="ical-link" href="" target="_blank"
+        style="display: none; size:12px ; position: fixed; bottom: 10px; left: 10px;">📆</a>
+
+    <a id="navigateLink" class="navigate-link" href="" target="_blank"
+        style="display: none; size:12px; position: fixed; bottom: 10px; right: 10px;">🚗</a>
+
+</body>
+
+</html>

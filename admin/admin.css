@@ -1,0 +1,211 @@
+/* Reset and Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Admin Container */
+.event-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.invite-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Add Event Button */
+#addEventButton {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#addInviteButton {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    /* Add this line */
+}
+
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+    /* Add this line */
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    position: fixed;
+    /* Changed from relative */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Necessary for centering */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+    .admin-container {
+        padding: 15px;
+    }
+
+    /* Updated Table Styles */
+    table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        word-wrap: break-word;
+        font-size: 12px;
+    }
+
+    /* Adjusts Modal Content */
+    .modal-content {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* Labels and Inputs */
+    label,
+    input[type="text"],
+    input[type="datetime-local"],
+    button {
+        font-size: 16px;
+    }
+
+    /* Updated Add Event Button Styles */
+    #addEventButton {
+        float: right;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    #addInviteButton {
+        float: right;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .status-unopened {
+        background-color: lightgray;
+    }
+
+    .status-opened {
+        background-color: white;
+    }
+
+    .status-accepted {
+        background-color: green;
+    }
+
+    .status-declined {
+        background-color: red;
+    }
+
+}
