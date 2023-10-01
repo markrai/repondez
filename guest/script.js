@@ -82,7 +82,7 @@ async function fetchInviteAndEventDetails(inviteId, initialFormat) {
   if (!inviteId) {
     showErrorPopup();
     console.error("Invalid invite link.");
-    return; // Removed redirect
+    return;
   }
 
   try {
@@ -239,12 +239,15 @@ function updateCalendarLinkVisibility(accepted) {
 
   const calendarLinkElement = document.getElementById('calendarLink');
   const navigateLinkElement = document.getElementById('navigateLink');
+  const whatsappLinkElement = document.getElementById('whatsappLink');
 
   if (accepted === true) {
     calendarLinkElement.style.display = 'block';
-    navigateLinkElement.style.display = 'block';  
+    navigateLinkElement.style.display = 'block';
+    whatsappLinkElement.style.display = 'block';
   } else {
     calendarLinkElement.style.display = 'none';
-    navigateLinkElement.style.display = 'none';  
+    navigateLinkElement.style.display = 'none';
+    whatsappLinkElement.style.display = 'none';
   }
 }
