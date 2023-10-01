@@ -234,20 +234,22 @@ END:VCALENDAR`;
   }
 }
 
-// Function to update the visibility of the Add to Calendar link
-function updateCalendarLinkVisibility(accepted) {
 
+function updateCalendarLinkVisibility(accepted) {
   const calendarLinkElement = document.getElementById('calendarLink');
   const navigateLinkElement = document.getElementById('navigateLink');
   const whatsappLinkElement = document.getElementById('whatsappLink');
 
+  // If accepted, show calendar and navigation links, hide WhatsApp link
   if (accepted === true) {
     calendarLinkElement.style.display = 'block';
     navigateLinkElement.style.display = 'block';
-    whatsappLinkElement.style.display = 'block';
-  } else {
+    whatsappLinkElement.style.display = 'none';
+  } 
+  // If declined, hide calendar and navigation links, show WhatsApp link
+  else {
     calendarLinkElement.style.display = 'none';
     navigateLinkElement.style.display = 'none';
-    whatsappLinkElement.style.display = 'none';
+    whatsappLinkElement.style.display = 'block';
   }
 }
